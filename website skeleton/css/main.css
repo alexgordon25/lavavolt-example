@@ -63,6 +63,14 @@ sup {
 }
 .btn {
 	text-transform: uppercase;
+	text-shadow: rgba(0,0,0,.5) 0 1px 0;
+	border-radius: 10px;
+	border-top: 1px solid rgba(255,255,255,0.8);
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	-webkit-transition: background .2s ease-in-out;
+	-moz-transition: 	background .2s ease-in-out;
+	transition: 		background .2s ease-in-out;
+	box-shadow: 		0 -2px 0 1px #0d72b8 inset, 0 5px 5px rgba(3, 25, 41, 0.17), 0 20px rgba(255, 255, 255, 0.25) inset;
 }
 
 /*******************************************
@@ -219,9 +227,20 @@ header .nav > li > a {
 	color:#ed1c24;
 }
 .carousel-caption .btn {
+	font-weight: bold;
 	position: absolute;
+	padding-right:60px;
 	bottom:10px;
 	left:85px;
+}
+.btn .fa-bolt {
+	position: absolute;
+	top:5px;
+	right:15px;
+	font-size: 150%;
+	text-shadow: rgba(0,0,0,.5) 0 1px 0;
+	padding-left:12px;
+	border-left:1px solid #ccc;
 }
 .carousel-indicators {
 	bottom:0px;
@@ -358,6 +377,10 @@ header .nav > li > a {
 #about .pricing p.bluetxt {
 	color:#0077d1;
 	font-weight: 600;
+}
+#about .btn.price {
+	position: relative;
+	padding-right:60px;
 }
 #about .pricing p.smalltxt {
 	font-size: 80%;
