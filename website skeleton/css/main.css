@@ -1,0 +1,401 @@
+/********************************************************************************
+Rain CSS Coding Standards outlined at http://standards.mediarain.com/html-css
+
+	@Section: Applies to all page sections
+	**Search for @ symbol or @Section: to search by category
+
+	Color Reference:
+    	black: #000000;
+    	lightblue: #0077d1;
+    	midgray: #3a4448;
+		red: #ed1c24;
+		white: #ffffff;
+    	gray: #888888;
+
+	Font-Family Reference:
+	
+
+********************************************************************************/
+
+
+
+/************************************
+
+	@Search: Global
+
+************************************/
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
+
+body {
+	background: #e7e7e7;
+	color: #3a4448;
+	font-family: 'Roboto', sans-serif;
+}
+a {
+	text-decoration: none;
+	outline: none;
+	overflow: hidden;
+	color: ;
+}
+a:hover {
+	text-decoration: none;
+	outline: none;
+	overflow: hidden;
+}
+a:active {
+	text-decoration: none;
+	outline: none;
+	overflow: hidden;
+}
+a:visited {
+	text-decoration: none;
+	outline: none;
+	overflow: hidden;
+}
+sup {
+	font-size: 60%;
+	vertical-align: top;
+}
+.clear {
+	clear: both;
+	display: block;
+}
+.btn {
+	text-transform: uppercase;
+}
+
+/*******************************************
+
+	@Section: Type
+
+*******************************************/
+
+
+b {
+	font-weight: 700;
+}
+em {
+	font-style: oblique;
+}
+h1 {
+	
+}
+h2 {
+	
+}
+h3 {
+	
+}
+p {
+	
+}
+
+
+
+/*******************************************
+
+	@Section: Forms
+
+*******************************************/
+
+
+form {
+	
+}
+
+
+
+/*******************************************
+
+	@Section: Header
+
+*******************************************/
+
+
+header {
+	background-color: #e7e7e7;
+	width: 100%;
+	height: 90px;
+	margin: auto;
+	position: relative;
+}
+header .container {
+	width: 900px;
+	padding:0;
+}
+header .logo-container {
+	width: 170px;
+	display: inline-block;
+	height: 90px;
+	position: relative;
+}
+header a#logo {
+  background: url(../img/lavavolt_logo.png) no-repeat;
+  height: 47px;
+  top: 20px;
+  position: absolute;
+  text-indent: -9999px;
+  width: 167px;
+  z-index: 20;
+}
+header .nav-container{
+	width: 710px;
+	display:inline-block;
+	float: right;
+	position: relative;
+}
+header .google-container {
+	border-bottom: 1px solid #b9b9b9;
+	display: block;
+	height: 55px;
+}
+header a#google-complaint {
+  background: url(../img/googlecomplaint_logo.png) no-repeat;
+  height: 55px;
+  text-indent: -9999px;
+  width: 150px;
+  float:right;
+  display: block;
+  z-index: 20;
+}
+
+/*******************************************
+
+	@Section: Navigation
+
+*******************************************/
+
+header .navtoggle-container {
+	border-top: 1px solid #f0f0f0;
+	height: 33px;
+
+}
+header .navbar-header {
+	width: 100%;
+}
+header .navbar-collapse {
+	float: right;
+}
+header ul.navbar-nav {
+	margin-right:10px;
+}
+header .nav > li > a {
+	text-transform: uppercase;
+	color: #3a4448;
+	padding: 5px 10px;
+	margin: 0;
+}
+
+
+/*******************************************
+
+	@Section: Carousel
+
+*******************************************/
+
+#myCarousel {
+	margin: 100px auto 20px auto;
+	width: 900px;
+	height: 442px;
+	border:10px solid #fff;
+	-moz-box-shadow: 0 0 5px 5px #888;
+	-webkit-box-shadow: 0 0 5px 5px #888;
+	box-shadow: 0 0 5px 5px #888;
+	overflow: hidden;
+}
+.carousel-caption {
+	left:20px;
+	top:0;
+	text-align: left;
+	padding-top: 0;
+}
+.carousel-caption h1 {
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	margin: 10px 0;
+}
+.carousel-caption h1 span {
+	color:#ed1c24;
+}
+.carousel-caption .btn {
+	position: absolute;
+	bottom:10px;
+	left:85px;
+}
+.carousel-indicators {
+	bottom:0px;
+	left:auto;
+	right:10px;
+	width: auto;
+	margin-left: 0;
+}
+.carousel-control {
+	z-index: 20;
+}
+
+/*******************************************
+
+	@Section: Carousel
+
+*******************************************/
+#moreinfo {
+	background-image: url(../img/grid_bkg.png);
+	background-color: #000;
+	font-size: 90%;
+	width: 100%;
+	color: #fff;
+}
+#moreinfo .container {
+	width: 900px;
+	padding: 10px 40px 20px;
+}
+#moreinfo h3 {
+	text-transform: uppercase;
+}
+#moreinfo ul {
+	margin-left: 50px;
+}
+#moreinfo .highend {
+	margin-top: 20px;
+	text-align: center;
+}
+
+/*******************************************
+
+	@Section: About
+
+*******************************************/
+#about {
+	width: 100%;
+	margin: 0 auto;
+}
+#about .container {
+	width: 900px;
+}
+#about h2 {
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+}
+#about h2 img {
+	margin: -5px 0 0 15px;
+}
+.social-icons {
+  text-align: right;
+  padding-top: 20px;
+}
+.social-icons .txt {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300;
+	font-size: 110%;
+	text-transform: uppercase;
+}
+.social-icons h1 {
+  margin: 40px 0;
+}
+.social-icons ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.social-icons ul li {
+  display: inline-block;
+  *display: inline;
+  vertical-align: middle;
+}
+.social-icons ul li a {
+  display: block;
+  font-size: 1.5em;
+  font-weight: 300;
+  margin: 0 5px;
+  padding-top: 2px;
+  text-decoration: none;
+}
+.social-icons ul li a i {
+  color: #c3c3c3;
+}
+.social-icons ul li a:focus i,
+.social-icons ul li a:hover i {
+  opacity: 0.5;
+  color:#3a4448;
+}
+#about .container > .row:first-child {
+	border-bottom: 1px solid #b9b9b9;
+}
+
+#about .container > .row:nth-child(2) {
+	border-top: 1px solid #fff;	
+	border-bottom: 1px solid #b9b9b9;
+	padding-top: 20px;
+}
+#about .container > .row:nth-child(2) img,
+#about .container > .row:nth-child(3) img {
+	width: 195px;
+	border:5px solid #fff;
+	-moz-box-shadow: 0 0 5px 2px #ccc;
+	-webkit-box-shadow: 0 0 5px 2px #ccc;
+	box-shadow: 0 0 5px 2px #ccc;
+}
+#about .container > .row:nth-child(3) img {
+	width: 170px;
+}
+#about h3 {
+	font-size: 110%;
+	text-transform: uppercase;
+	color:#0077d1;
+	font-weight: 600;
+}
+#about .container > .row:nth-child(3) {
+	border-top: 1px solid #fff;	
+	padding-top: 20px;
+}
+#about .pricing {
+	background: #fff;
+	border:1px solid #b9b9b9;
+	padding:10px;
+	text-align: center;
+}
+#about .pricing p.bluetxt {
+	color:#0077d1;
+	font-weight: 600;
+}
+#about .pricing p.smalltxt {
+	font-size: 80%;
+	color:#888888;
+}
+/*******************************************
+
+	@Section: Footer
+
+*******************************************/
+footer {
+	width: 100%;
+	margin: auto;
+	position: relative;
+}
+footer .container {
+	width: 1000px;
+}
+.footer-logo {
+  height: 41px;
+  text-align: right;
+}
+.footer-logo img {
+	margin-right: 100px;
+}
+.footer-container {
+	width: 1000px;
+	height: 116px;
+	display: block;
+	background: url(../img/footer_bkg.png) 25px 0 no-repeat;
+}
+
+
+
+/*******************************************
+
+	@Section: Home Page Content
+
+*******************************************/
+
+
