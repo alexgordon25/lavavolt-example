@@ -75,7 +75,6 @@ sup {
  * @Section: Type
  *
 ************************************* */
-
 b {
 	font-weight: 700;
 }
@@ -113,8 +112,10 @@ header {
 	background-color: #e7e7e7;
 	width: 100%;
 	height: 70px;
-	margin: auto;
 	position: relative;
+}
+header.navbar {
+	margin-bottom: 0px;
 }
 header .container {
 	width: 100%;
@@ -123,24 +124,23 @@ header .container {
 header .logo-container {
 	width: 170px;
 	display: inline-block;
-	height: 70px;
 	position: relative;
 	margin-left: 20px;
 }
 header a#logo {
   background: url(../img/lavavolt_logo.png) no-repeat;
   height: 47px;
-  top: 15px;
+  top: 0;
   position: absolute;
   text-indent: -9999px;
   width: 167px;
   z-index: 20;
 }
 header .nav-container{
-	width: 80px;
-	display:inline-block;
-	float: right;
-	position: relative;
+	width: 100%;
+	display: inline-block;
+	right: 0;
+	position: absolute;
 }
 header .google-container {
 	display: none;
@@ -150,7 +150,7 @@ header a#google-complaint {
   height: 55px;
   text-indent: -9999px;
   width: 150px;
-  float:right;
+  float: right;
   display: block;
   z-index: 20;
 }
@@ -162,23 +162,29 @@ header a#google-complaint {
 ************************************* */
 header .navtoggle-container {
 	border-top: 0;
-	margin-top: 15px;
-	margin-right:10px;
 	height: 33px;
 	float: right;
 	display: inline-block;
+	width:100%;
 }
 header .navbar-header {
 	width: 100%;
+	height: 70px;
+
 }
 header .navbar-toggle {
 	border:1px solid #3a4448;
+	margin-top: 20px;
+	margin-right:25px;
 }
 header .icon-bar {
 	background-color: #3a4448;
 }
 header .navbar-collapse {
 	float: right;
+	width: 100%;
+	position: relative;
+	background-color: #e7e7e7;
 }
 header ul.navbar-nav {
 	margin-right:10px;
@@ -196,32 +202,42 @@ header .nav > li > a {
  *
 ************************************* */
 #mycarousel {
-	margin: 80px auto 20px auto;
+	margin: 0 auto 20px auto;
 	width: 100%;
-	height: 442px;
+	height: auto;
 	border:0;
 	overflow: hidden;
 }
 .carousel-caption {
-	left:20px;
-	top:0;
+	left: 20px;
+	right: 32%;
+	top: 0;
+	bottom: 0;
 	text-align: left;
 	padding-top: 0;
 }
 .carousel-caption h1 {
+	background-color: rgba(0,0,0,0.5);
+	font-size: 150%;
 	font-family: 'Oswald', sans-serif;
 	text-transform: uppercase;
-	margin: 10px 0;
+	margin: 2% 0;
+	padding: 2px;
+	display: inline-block;
 }
 .carousel-caption h1 span {
 	color:#ed1c24;
+}
+.carousel-caption p {
+	display: none;
 }
 .carousel-caption .btn {
 	font-weight: bold;
 	position: absolute;
 	padding-right:60px;
-	bottom:10px;
-	left:85px;
+	margin-bottom: 3%;
+	bottom:0;
+	left:10%;
 }
 .btn .fa-bolt {
 	position: absolute;
@@ -239,8 +255,11 @@ header .nav > li > a {
 	width: auto;
 	margin-left: 0;
 }
-.carousel-control {
+
+.carousel-control.left,
+.carousel-control.right {
 	z-index: 20;
+	background-image: none;
 }
 
 /* ************************************
@@ -256,18 +275,22 @@ header .nav > li > a {
 	color: #fff;
 }
 #moreinfo .container {
-	width: 900px;
-	padding: 10px 40px 20px;
+	width: auto;	
 }
 #moreinfo h3 {
+	text-align: center;
+	font-size: 150%;
 	text-transform: uppercase;
 }
 #moreinfo ul {
 	margin-left: 50px;
 }
 #moreinfo .highend {
-	margin-top: 20px;
+	margin: 20px 0;
 	text-align: center;
+}
+#moreinfo .highend .ourwork.btn {
+	margin: 10px;
 }
 
 /* ************************************
@@ -279,10 +302,10 @@ header .nav > li > a {
 	width: 100%;
 	margin: 0 auto;
 }
-#about .container {
-	width: 900px;
-}
+
 #about h2 {
+	text-align: center;
+	font-size: 150%;
 	font-family: 'Oswald', sans-serif;
 	text-transform: uppercase;
 }
@@ -290,8 +313,7 @@ header .nav > li > a {
 	margin: -5px 0 0 15px;
 }
 .social-icons {
-  text-align: right;
-  padding-top: 20px;
+  text-align: center;
 }
 .social-icons .txt {
 	font-family: 'Oswald', sans-serif;
@@ -408,7 +430,9 @@ footer .container {
  * @Section: Content
  *
 ************************************* */
-
+#content {
+	margin-top: 70px;
+}
 /* ************************************
  *
  * @Section: Media Queries
@@ -419,12 +443,92 @@ footer .container {
 
 /* Small devices (tablets, 450px and up) */
 @media (min-width: 450px) {
-
+	.carousel-caption p {
+		display: inline-block;	
+		background-color: rgba(0,0,0,0.5);
+		border-radius: 4px;
+		padding: 2px 4px;
+		clear: both;
+	}
 }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+	header {
+	}
+	header .container {
+	}
+	header .logo-container {
 
+	}
+	header a#logo {
+
+	}
+	header .nav-container{
+		position: relative;
+		float:right;
+	}
+	header .google-container {
+
+	}
+	header .navtoggle-container {
+		height: 33px;
+		width: 100%;
+		margin-top: 0px;
+		margin-right:0px;
+	}
+	header .navbar-header {
+		width: 100%;
+		height: auto;
+	}
+	header .navbar-collapse {
+		width: auto;
+		position: relative;
+		background: none;
+	}
+	#mycarousel {
+		margin: 80px auto 20px auto;
+		width: 95%;
+		height: auto;
+		border:10px solid #fff;
+		-moz-box-shadow: 0 0 5px 5px #888;
+		-webkit-box-shadow: 0 0 5px 5px #888;
+		box-shadow: 0 0 5px 5px #888;
+	}
+	.carousel-caption h1 {
+		font-size: 36px;
+		display:block;
+		background: none;
+	}
+	.carousel-caption p {
+		background: none;
+	}
+	.carousel-caption .btn {
+		margin-bottom: 5%;
+		padding: 10px 60px 10px 16px;
+		font-size: 18px;
+		line-height: 1.33;
+		border-radius: 6px;
+	}
+	#moreinfo .container {
+		width: 900px;
+		padding: 10px 40px 20px;
+	}
+	#moreinfo h3 {
+		text-align: left;
+		font-size: 24px;
+	}
+	#about .container {
+		width: 900px;
+	}
+	#about h2 {
+		text-align: left;
+		font-size: 30px;
+	}
+	.social-icons {
+	  text-align: right;
+	  padding-top: 20px;
+	}
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -444,6 +548,8 @@ footer .container {
 	}
 	header .nav-container{
 		width: 710px;
+		position: relative;
+		float:right;
 	}
 	header .google-container {
 		border-bottom: 1px solid #b9b9b9;
@@ -457,6 +563,15 @@ footer .container {
 		margin-top: 0px;
 		margin-right:0px;
 	}
+	header .navbar-header {
+		width: 100%;
+		height: auto;
+	}
+	header .navbar-collapse {
+		width: auto;
+		position: relative;
+		background: none;
+	}
 	#mycarousel {
 		margin: 100px auto 20px auto;
 		width: 900px;
@@ -465,7 +580,40 @@ footer .container {
 		-moz-box-shadow: 0 0 5px 5px #888;
 		-webkit-box-shadow: 0 0 5px 5px #888;
 		box-shadow: 0 0 5px 5px #888;
-		overflow: hidden;
+	}
+	.carousel-caption h1 {
+		font-size: 36px;
+		display:block;
+		background: none;
+	}
+	.carousel-caption p {
+		background: none;
+	}
+	.carousel-caption .btn {
+		margin-bottom: 5%;
+		padding: 10px 60px 10px 16px;
+		font-size: 18px;
+		line-height: 1.33;
+		border-radius: 6px;
+	}
+	#moreinfo .container {
+		width: 900px;
+		padding: 10px 40px 20px;
+	}
+	#moreinfo h3 {
+		text-align: left;
+		font-size: 24px;
+	}
+	#about .container {
+		width: 900px;
+	}
+	#about h2 {
+		text-align: left;
+		font-size: 30px;
+	}
+	.social-icons {
+	  text-align: right;
+	  padding-top: 20px;
 	}
 }
 
