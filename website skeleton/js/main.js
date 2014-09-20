@@ -1,9 +1,9 @@
 $( document ).ready(function() {
     /* CAROUSEL
     ========================================*/    
-    $("#myCarousel").carousel({
+    $("#mycarousel").carousel({
         //interval: 8000,
-        //pause: true,
-        //interval: false
+        pause: true,
+        interval: false
     });
 }); //END DOCUMENT READY

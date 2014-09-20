@@ -5,25 +5,22 @@ Rain CSS Coding Standards outlined at http://standards.mediarain.com/html-css
 	**Search for @ symbol or @Section: to search by category
 
 	Color Reference:
-    	black: #000000;
-    	lightblue: #0077d1;
-    	midgray: #3a4448;
-		red: #ed1c24;
-		white: #ffffff;
-    	gray: #888888;
+    	black: #000000
+    	lightblue: #0077d1
+    	midgray: #3a4448
+		red: #ed1c24
+		white: #ffffff
+    	gray: #888888
 
-	Font-Family Reference:
-	
-
+	Font-Family Reference: 	Roboto:400,700
+							Oswald:400,700,300
 ********************************************************************************/
 
-
-
-/************************************
-
-	@Search: Global
-
-************************************/
+/* ************************************
+ *
+ * @Section: Global
+ *
+************************************* */
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
 
@@ -63,15 +60,21 @@ sup {
 }
 .btn {
 	text-transform: uppercase;
+	text-shadow: rgba(0,0,0,.5) 0 1px 0;
+	border-radius: 10px;
+	border-top: 1px solid rgba(255,255,255,0.8);
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	-webkit-transition: background .2s ease-in-out;
+	-moz-transition: 	background .2s ease-in-out;
+	transition: 		background .2s ease-in-out;
+	box-shadow: 		0 -2px 0 1px #0d72b8 inset, 0 5px 5px rgba(3, 25, 41, 0.17), 0 20px rgba(255, 255, 255, 0.25) inset;
 }
 
-/*******************************************
-
-	@Section: Type
-
-*******************************************/
-
-
+/* ************************************
+ *
+ * @Section: Type
+ *
+************************************* */
 b {
 	font-weight: 700;
 }
@@ -91,91 +94,97 @@ p {
 	
 }
 
-
-
-/*******************************************
-
-	@Section: Forms
-
-*******************************************/
-
-
+/* ************************************
+ *
+ * @Section: Forms
+ *
+************************************* */
 form {
 	
 }
 
-
-
-/*******************************************
-
-	@Section: Header
-
-*******************************************/
-
-
+/* ************************************
+ *
+ * @Section: Header
+ *
+************************************* */
 header {
 	background-color: #e7e7e7;
 	width: 100%;
-	height: 90px;
-	margin: auto;
+	height: 70px;
 	position: relative;
 }
+header.navbar {
+	margin-bottom: 0px;
+}
 header .container {
-	width: 900px;
+	width: 100%;
 	padding:0;
 }
 header .logo-container {
 	width: 170px;
 	display: inline-block;
-	height: 90px;
 	position: relative;
+	margin-left: 20px;
 }
 header a#logo {
   background: url(../img/lavavolt_logo.png) no-repeat;
   height: 47px;
-  top: 20px;
+  top: 0;
   position: absolute;
   text-indent: -9999px;
   width: 167px;
   z-index: 20;
 }
 header .nav-container{
-	width: 710px;
-	display:inline-block;
-	float: right;
-	position: relative;
+	width: 100%;
+	display: inline-block;
+	right: 0;
+	position: absolute;
 }
 header .google-container {
-	border-bottom: 1px solid #b9b9b9;
-	display: block;
-	height: 55px;
+	display: none;
 }
 header a#google-complaint {
   background: url(../img/googlecomplaint_logo.png) no-repeat;
   height: 55px;
   text-indent: -9999px;
   width: 150px;
-  float:right;
+  float: right;
   display: block;
   z-index: 20;
 }
 
-/*******************************************
-
-	@Section: Navigation
-
-*******************************************/
-
+/* ************************************
+ *
+ * @Section: Navigation
+ *
+************************************* */
 header .navtoggle-container {
-	border-top: 1px solid #f0f0f0;
+	border-top: 0;
 	height: 33px;
-
+	float: right;
+	display: inline-block;
+	width:100%;
 }
 header .navbar-header {
 	width: 100%;
+	height: 70px;
+
+}
+header .navbar-toggle {
+	border:1px solid #3a4448;
+	margin-top: 20px;
+	margin-right:25px;
+}
+header .icon-bar {
+	background-color: #3a4448;
 }
 header .navbar-collapse {
 	float: right;
+	width: 100%;
+	position: relative;
+	background-color: #e7e7e7;
 }
 header ul.navbar-nav {
 	margin-right:10px;
@@ -187,41 +196,57 @@ header .nav > li > a {
 	margin: 0;
 }
 
-
-/*******************************************
-
-	@Section: Carousel
-
-*******************************************/
-
-#myCarousel {
-	margin: 100px auto 20px auto;
-	width: 900px;
-	height: 442px;
-	border:10px solid #fff;
-	-moz-box-shadow: 0 0 5px 5px #888;
-	-webkit-box-shadow: 0 0 5px 5px #888;
-	box-shadow: 0 0 5px 5px #888;
+/* ************************************
+ *
+ * @Section: Carousel
+ *
+************************************* */
+#mycarousel {
+	margin: 0 auto 20px auto;
+	width: 100%;
+	height: auto;
+	border:0;
 	overflow: hidden;
 }
 .carousel-caption {
-	left:20px;
-	top:0;
+	left: 20px;
+	right: 32%;
+	top: 0;
+	bottom: 0;
 	text-align: left;
 	padding-top: 0;
 }
 .carousel-caption h1 {
+	background-color: rgba(0,0,0,0.5);
+	font-size: 150%;
 	font-family: 'Oswald', sans-serif;
 	text-transform: uppercase;
-	margin: 10px 0;
+	margin: 2% 0;
+	padding: 2px;
+	display: inline-block;
 }
 .carousel-caption h1 span {
 	color:#ed1c24;
 }
+.carousel-caption p {
+	display: none;
+}
 .carousel-caption .btn {
+	font-weight: bold;
 	position: absolute;
-	bottom:10px;
-	left:85px;
+	padding-right:60px;
+	margin-bottom: 3%;
+	bottom:0;
+	left:10%;
+}
+.btn .fa-bolt {
+	position: absolute;
+	top:5px;
+	right:15px;
+	font-size: 150%;
+	text-shadow: rgba(0,0,0,.5) 0 1px 0;
+	padding-left:12px;
+	border-left:1px solid #ccc;
 }
 .carousel-indicators {
 	bottom:0px;
@@ -230,15 +255,18 @@ header .nav > li > a {
 	width: auto;
 	margin-left: 0;
 }
-.carousel-control {
+
+.carousel-control.left,
+.carousel-control.right {
 	z-index: 20;
+	background-image: none;
 }
 
-/*******************************************
-
-	@Section: Carousel
-
-*******************************************/
+/* ************************************
+ *
+ * @Section: More info
+ *
+************************************* */
 #moreinfo {
 	background-image: url(../img/grid_bkg.png);
 	background-color: #000;
@@ -247,33 +275,37 @@ header .nav > li > a {
 	color: #fff;
 }
 #moreinfo .container {
-	width: 900px;
-	padding: 10px 40px 20px;
+	width: auto;	
 }
 #moreinfo h3 {
+	text-align: center;
+	font-size: 150%;
 	text-transform: uppercase;
 }
 #moreinfo ul {
 	margin-left: 50px;
 }
 #moreinfo .highend {
-	margin-top: 20px;
+	margin: 20px 0;
 	text-align: center;
 }
+#moreinfo .highend .ourwork.btn {
+	margin: 10px;
+}
 
-/*******************************************
-
-	@Section: About
-
-*******************************************/
+/* ************************************
+ *
+ * @Section: About
+ *
+************************************* */
 #about {
 	width: 100%;
 	margin: 0 auto;
 }
-#about .container {
-	width: 900px;
-}
+
 #about h2 {
+	text-align: center;
+	font-size: 150%;
 	font-family: 'Oswald', sans-serif;
 	text-transform: uppercase;
 }
@@ -281,8 +313,7 @@ header .nav > li > a {
 	margin: -5px 0 0 15px;
 }
 .social-icons {
-  text-align: right;
-  padding-top: 20px;
+  text-align: center;
 }
 .social-icons .txt {
 	font-family: 'Oswald', sans-serif;
@@ -322,7 +353,6 @@ header .nav > li > a {
 #about .container > .row:first-child {
 	border-bottom: 1px solid #b9b9b9;
 }
-
 #about .container > .row:nth-child(2) {
 	border-top: 1px solid #fff;	
 	border-bottom: 1px solid #b9b9b9;
@@ -359,15 +389,20 @@ header .nav > li > a {
 	color:#0077d1;
 	font-weight: 600;
 }
+#about .btn.price {
+	position: relative;
+	padding-right:60px;
+}
 #about .pricing p.smalltxt {
 	font-size: 80%;
 	color:#888888;
 }
-/*******************************************
 
-	@Section: Footer
-
-*******************************************/
+/* ************************************
+ *
+ * @Section: Footer
+ *
+************************************* */
 footer {
 	width: 100%;
 	margin: auto;
@@ -390,12 +425,214 @@ footer .container {
 	background: url(../img/footer_bkg.png) 25px 0 no-repeat;
 }
 
+/* ************************************
+ *
+ * @Section: Content
+ *
+************************************* */
+#content {
+	margin-top: 70px;
+}
+/* ************************************
+ *
+ * @Section: Media Queries
+ *
+************************************* */
+/* Extra small devices (phones, less than 768px) */
+/* No media query -> mobile first strategy */
 
+/* Small devices (tablets, 450px and up) */
+@media (min-width: 450px) {
+	.carousel-caption p {
+		display: inline-block;	
+		background-color: rgba(0,0,0,0.5);
+		border-radius: 4px;
+		padding: 2px 4px;
+		clear: both;
+	}
+}
 
-/*******************************************
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	header {
+	}
+	header .container {
+	}
+	header .logo-container {
 
-	@Section: Home Page Content
+	}
+	header a#logo {
 
-*******************************************/
+	}
+	header .nav-container{
+		position: relative;
+		float:right;
+	}
+	header .google-container {
 
+	}
+	header .navtoggle-container {
+		height: 33px;
+		width: 100%;
+		margin-top: 0px;
+		margin-right:0px;
+	}
+	header .navbar-header {
+		width: 100%;
+		height: auto;
+	}
+	header .navbar-collapse {
+		width: auto;
+		position: relative;
+		background: none;
+	}
+	#mycarousel {
+		margin: 80px auto 20px auto;
+		width: 95%;
+		height: auto;
+		border:10px solid #fff;
+		-moz-box-shadow: 0 0 5px 5px #888;
+		-webkit-box-shadow: 0 0 5px 5px #888;
+		box-shadow: 0 0 5px 5px #888;
+	}
+	.carousel-caption h1 {
+		font-size: 36px;
+		display:block;
+		background: none;
+	}
+	.carousel-caption p {
+		background: none;
+	}
+	.carousel-caption .btn {
+		margin-bottom: 5%;
+		padding: 10px 60px 10px 16px;
+		font-size: 18px;
+		line-height: 1.33;
+		border-radius: 6px;
+	}
+	#moreinfo .container {
+		width: 900px;
+		padding: 10px 40px 20px;
+	}
+	#moreinfo h3 {
+		text-align: left;
+		font-size: 24px;
+	}
+	#about .container {
+		width: 900px;
+	}
+	#about h2 {
+		text-align: left;
+		font-size: 30px;
+	}
+	.social-icons {
+	  text-align: right;
+	  padding-top: 20px;
+	}
+}
 
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	header {
+		height: 90px;
+	}
+	header .container {
+		width: 900px;
+	}
+	header .logo-container {
+		margin-left: 0px;
+		height: 90px;
+	}
+	header a#logo {
+	  top: 20px;
+	}
+	header .nav-container{
+		width: 710px;
+		position: relative;
+		float:right;
+	}
+	header .google-container {
+		border-bottom: 1px solid #b9b9b9;
+		display: block;
+		height: 55px;
+	}
+	header .navtoggle-container {
+		border-top: 1px solid #f0f0f0;
+		height: 33px;
+		width: 100%;
+		margin-top: 0px;
+		margin-right:0px;
+	}
+	header .navbar-header {
+		width: 100%;
+		height: auto;
+	}
+	header .navbar-collapse {
+		width: auto;
+		position: relative;
+		background: none;
+	}
+	#mycarousel {
+		margin: 100px auto 20px auto;
+		width: 900px;
+		height: 442px;
+		border:10px solid #fff;
+		-moz-box-shadow: 0 0 5px 5px #888;
+		-webkit-box-shadow: 0 0 5px 5px #888;
+		box-shadow: 0 0 5px 5px #888;
+	}
+	.carousel-caption h1 {
+		font-size: 36px;
+		display:block;
+		background: none;
+	}
+	.carousel-caption p {
+		background: none;
+	}
+	.carousel-caption .btn {
+		margin-bottom: 5%;
+		padding: 10px 60px 10px 16px;
+		font-size: 18px;
+		line-height: 1.33;
+		border-radius: 6px;
+	}
+	#moreinfo .container {
+		width: 900px;
+		padding: 10px 40px 20px;
+	}
+	#moreinfo h3 {
+		text-align: left;
+		font-size: 24px;
+	}
+	#about .container {
+		width: 900px;
+	}
+	#about h2 {
+		text-align: left;
+		font-size: 30px;
+	}
+	.social-icons {
+	  text-align: right;
+	  padding-top: 20px;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  
+}
+
+/* Large devices (large desktops, 1680px and up) */
+@media (min-width: 1680px) {
+
+}
+
+/* Large devices (large desktops, 2500px and up) */
+@media (min-width: 2500px) {
+
+}
+
+/* for higher resolutions (android and retina) */
+@media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (max--moz-device-pixel-ratio: 1.5) {
+
+}
